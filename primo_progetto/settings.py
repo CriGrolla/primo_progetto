@@ -1,3 +1,4 @@
+{%load static%} 
 """
 Django settings for primo_progetto project.
 
@@ -39,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'prima_app',
-    'seconda_app'
+    'seconda_app',
+    'templates',
 ]
 
 MIDDLEWARE = [
