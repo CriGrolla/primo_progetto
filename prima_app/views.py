@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 #L1
 def homepage(request):
-    return HttpResponse("<h1>Ciao!Questa è la homepage di CriGrolla!</h1>")
+    return render(request, "homepage.html")
 
 #L2
 def menu(request):
