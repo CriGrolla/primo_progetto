@@ -1,24 +1,3 @@
-<!--
-{% extends 'base.html'%}
-
-{%block title%}
-    Lista autori
-{%endblock title%}
-
-{%block content%}
-    <h1> {{ autore.nome }}</h1>
-    <h3> {{ autore.cognome }}</h3>
-    <h5>Libri: {{ libro.autore }}</h5>
-  {%endblock content%}
-
--->
-
-
-
-
-
-
-
   {% extends 'base.html' %}
 
 {% block head_title %}{{ block.super }} | {{ autore }}{% endblock head_title %}
