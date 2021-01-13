@@ -14,6 +14,7 @@ class Genere(models.Model):
 class Autore(models.Model):
     nome=models.CharField(max_length=20)
     cognome=models.CharField(max_length=20)
+    nazione=models.CharField(max_length=20)
 
     def __str__(self):
         return self.nome+" "+self.cognome
