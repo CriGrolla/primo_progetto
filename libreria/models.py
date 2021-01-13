@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class GENERE_CG(models.Model):
+class Genere(models.Model):
     nome=models.CharField(max_length=20)
 
     def __str__(self):
@@ -11,7 +11,7 @@ class GENERE_CG(models.Model):
         verbose_name = "Genere"
         verbose_name_plural = "Generi"
 
-class AUTORE_CG(models.Model):
+class Autore(models.Model):
     nome=models.CharField(max_length=20)
     cognome=models.CharField(max_length=20)
 
@@ -22,10 +22,10 @@ class AUTORE_CG(models.Model):
         verbose_name = "Autore"
         verbose_name_plural = "Autori"    
 
-class LIBRO_CG(models.Model):
+class Libro(models.Model):
     titolo=models.CharField(max_length=100)
-    autore=models.ForeignKey(AUTORE_CG, on_delete=models.CASCADE, related_name="libri")
-    genere=models.ManyToManyField(GENERE_CG)
+    autore=models.ForeignKey(Autore, on_delete=models.CASCADE, related_name="libri")
+    genere=models.ManyToManyField(Genere)
     ISBN=models.CharField(max_length=15)
 
     def __str__(self):
