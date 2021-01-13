@@ -9,7 +9,7 @@
     {% for libro in  autore.libri.all %}
         <h4><strong>Titolo: </strong>{{ libro.titolo }}</h4>
         <h5><strong>Genere: </strong>{% for genere in libro.genere.all %}{{ genere }} {% endfor %}</h5>
-        <h5><strong>ISBN: </strong>{{ libro.isbn }}</h5>
+        <h5><strong>ISBN: </strong>{{ libro.ISBN }}</h5>
         <hr>
     {% endfor %}
 {% endblock content %}
