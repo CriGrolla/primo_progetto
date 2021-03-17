@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import FormContatto
+from django.http import HttpResponse
 
 # Create your views here.
 def contatti(request):
@@ -27,4 +28,4 @@ def contatti(request):
 
     #arriviamo a questo punto se si tratta della prima volta che la pagina viene richiesta (con metodo GET), o se il form non è valido e ha errori    
     context = {"form":form}
-    return render{request, "contatto.html", context}
+    return render(request, "contatto.html", context)
